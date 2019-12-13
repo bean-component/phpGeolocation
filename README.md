@@ -1,0 +1,1 @@
+For Upgrade and Dev Guideline or Workflow, check Documentation of phpThing Component.
