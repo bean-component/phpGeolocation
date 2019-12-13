@@ -81,7 +81,7 @@ class GeolocationTest extends KernelTestCase
         /** @var Geolocation $loc */
         $loc = $locs[0]['geolocation'];
         $distance = $locs[0]['distance'];
-        echo $loc->getName().'  '.$distance;
         $this->assertEquals('Trivex, 8 Burn Rd, Singapour 369977', $loc->getAddress());
+        $this->assertEquals(7.764638727877312, $distance);
     }
 }

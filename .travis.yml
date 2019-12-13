@@ -49,6 +49,9 @@ install:
   - mkdir src-symfony
   - composer $ACTION
   - sed -ri "s/src/src-symfony/" config/services.yaml
+  - printf "    Bean\Geolocation\Doctrine\Orm\Repository\:" >> config/services.yaml
+  - echo "        resource:" >> config/services.yaml
+  - echo "'../doctrine/Orm/Repository/*'" >> config/services.yaml
   - mv src/Controller src-symfony/
   - mv src/Entity src-symfony/
   - mv src/Migrations src-symfony/
