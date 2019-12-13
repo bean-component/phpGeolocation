@@ -28,7 +28,11 @@
         "symfony/property-access": "^5.0",
         "dama/doctrine-test-bundle": "^6.2",
         "beberlei/doctrineextensions": "^1.2",
-        "jsor/doctrine-postgis": "^1.7"        
+        "jsor/doctrine-postgis": "^1.7",
+        "symfony/twig-pack": "^1.0",
+        "symfony/maker-bundle": "^1.14",
+        "symfony/form": "^5.0",
+        "symfony/asset": "^5.0"        
     },
     "suggest": {
 
@@ -43,6 +47,7 @@
             "App\\": "src-symfony/",
             "Bean\\Thing\\Doctrine\\": "vendor/bean-component/php-thing/doctrine/",
             "Bean\\Geolocation\\Doctrine\\": "doctrine/",
+            "Bean\\Geolocation\\Form\\": "form/Symfony/",
             "Bean\\Tests\\Geolocation\\": "tests/"
         }
     },

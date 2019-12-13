@@ -8,6 +8,8 @@
 /symfony.lock
 /src/Kernel.php
 
+/templates/
+
 /src-symfony
 /src-symfony/Controller/
 /src-symfony/Entity/
