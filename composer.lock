@@ -4,33 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dea2127621e4924e36b68174456827ed",
+    "content-hash": "3a96e0918328561d7a5de7bd2900f735",
     "packages": [
         {
             "name": "bean-component/php-thing",
-            "version": "1.0.3",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bean-component/phpThing.git",
-                "reference": "98c850eb32e1544338683b4ef06c2a8be97cc3f9"
+                "reference": "e8b6bab569a311b9b662c3f869582efc1f1bc6b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bean-component/phpThing/zipball/98c850eb32e1544338683b4ef06c2a8be97cc3f9",
-                "reference": "98c850eb32e1544338683b4ef06c2a8be97cc3f9",
+                "url": "https://api.github.com/repos/bean-component/phpThing/zipball/e8b6bab569a311b9b662c3f869582efc1f1bc6b7",
+                "reference": "e8b6bab569a311b9b662c3f869582efc1f1bc6b7",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2"
-            },
-            "replace": {
-                "paragonie/random_compat": "2.*",
-                "symfony/polyfill-ctype": "*",
-                "symfony/polyfill-iconv": "*",
-                "symfony/polyfill-php56": "*",
-                "symfony/polyfill-php70": "*",
-                "symfony/polyfill-php71": "*",
-                "symfony/polyfill-php72": "*"
             },
             "require-dev": {
                 "dama/doctrine-test-bundle": "^6.2",
@@ -71,7 +62,7 @@
             "keywords": [
                 "php thing components"
             ],
-            "time": "2019-12-13T08:13:52+00:00"
+            "time": "2019-12-13T16:05:34+00:00"
         }
     ],
     "packages-dev": [
@@ -1372,6 +1363,69 @@
             "time": "2014-01-12T16:20:24+00:00"
         },
         {
+            "name": "jsor/doctrine-postgis",
+            "version": "v1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jsor/doctrine-postgis.git",
+                "reference": "a656156dd3b730a2d46cbcb6270e7124cbf62786"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jsor/doctrine-postgis/zipball/a656156dd3b730a2d46cbcb6270e7124cbf62786",
+                "reference": "a656156dd3b730a2d46cbcb6270e7124cbf62786",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "^2.4",
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "doctrine/orm": "^2.4",
+                "friendsofphp/php-cs-fixer": "^1.6",
+                "phpunit/phpunit": "^4.8.35 || ^5.7"
+            },
+            "suggest": {
+                "doctrine/orm": "For using with the Doctrine ORM"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jsor\\Doctrine\\PostGIS\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@gmail.com",
+                    "homepage": "http://sorgalla.com"
+                }
+            ],
+            "description": "Spatial and Geographic Data with PostGIS and Doctrine.",
+            "keywords": [
+                "database",
+                "dbal",
+                "doctrine",
+                "geo",
+                "geography",
+                "geometry",
+                "gis",
+                "orm",
+                "postgis",
+                "spatial"
+            ],
+            "time": "2018-08-01T06:24:52+00:00"
+        },
+        {
             "name": "ocramius/package-versions",
             "version": "1.5.1",
             "source": {
@@ -2640,16 +2694,16 @@
         },
         {
             "name": "symfony/flex",
-            "version": "v1.5.3",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "59b42aa1d3385a21683601c15e63eb35d2ebe8a4"
+                "reference": "952f45d1c5077e658cb16a61d11603bee873f968"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/59b42aa1d3385a21683601c15e63eb35d2ebe8a4",
-                "reference": "59b42aa1d3385a21683601c15e63eb35d2ebe8a4",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/952f45d1c5077e658cb16a61d11603bee873f968",
+                "reference": "952f45d1c5077e658cb16a61d11603bee873f968",
                 "shasum": ""
             },
             "require": {
@@ -2685,7 +2739,7 @@
                 }
             ],
             "description": "Composer plugin for Symfony",
-            "time": "2019-12-01T15:56:52+00:00"
+            "time": "2019-12-13T18:05:11+00:00"
         },
         {
             "name": "symfony/framework-bundle",
@@ -3181,6 +3235,64 @@
             "time": "2019-11-28T14:20:16+00:00"
         },
         {
+            "name": "symfony/polyfill-ctype",
+            "version": "v1.13.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "f8f0b461be3385e56d6de3dbb5a0df24c0c275e3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/f8f0b461be3385e56d6de3dbb5a0df24c0c275e3",
+                "reference": "f8f0b461be3385e56d6de3dbb5a0df24c0c275e3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-ctype": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.13-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gert de Pagter",
+                    "email": "BackEndTea@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for ctype functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "ctype",
+                "polyfill",
+                "portable"
+            ],
+            "time": "2019-11-27T13:56:44+00:00"
+        },
+        {
             "name": "symfony/polyfill-intl-idn",
             "version": "v1.13.1",
             "source": {
@@ -3300,6 +3412,61 @@
                 "shim"
             ],
             "time": "2019-11-27T14:18:11+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php72",
+            "version": "v1.13.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php72.git",
+                "reference": "66fea50f6cb37a35eea048d75a7d99a45b586038"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/66fea50f6cb37a35eea048d75a7d99a45b586038",
+                "reference": "66fea50f6cb37a35eea048d75a7d99a45b586038",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.13-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2019-11-27T13:56:44+00:00"
         },
         {
             "name": "symfony/polyfill-php73",

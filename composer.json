@@ -27,7 +27,8 @@
         "symfony/orm-pack": "^1.0",
         "symfony/property-access": "^5.0",
         "dama/doctrine-test-bundle": "^6.2",
-        "beberlei/doctrineextensions": "^1.2"        
+        "beberlei/doctrineextensions": "^1.2",
+        "jsor/doctrine-postgis": "^1.7"        
     },
     "suggest": {
 
