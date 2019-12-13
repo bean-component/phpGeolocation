@@ -1,8 +1,7 @@
 <?php
-namespace Bean\Geolocation\Doctrine\Orm;
+namespace Bean\Geolocation\Doctrine\Orm\Entity;
 
 use Bean\Geolocation\Model\GeolocationInterface;
-use Bean\Thing\Doctrine\Orm\Thing;
 use Bean\Thing\Model\ThingInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\Collection;
@@ -15,7 +14,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 
 /**
- * @ORM\Entity()
+ * @ORM\Entity(repositoryClass="Bean\Geolocation\Doctrine\Orm\Repository\GeolocationRepository")
  * @ORM\Table(name="test__geolocation")
  * @ORM\HasLifecycleCallbacks
  */
@@ -24,7 +23,7 @@ class Geolocation extends \Bean\Geolocation\Model\Geolocation implements Geoloca
     //    Mapping from Thing Component
     /**
      * @var array|null
-     * @ORM\Column(type="json", nullable=true)
+     * @ORM\Column(type="array", nullable=true)
      */
     protected $data = [];
 
@@ -45,7 +44,7 @@ class Geolocation extends \Bean\Geolocation\Model\Geolocation implements Geoloca
      * @var integer|null
      * @ORM\Id()
      * @ORM\GeneratedValue()
-     * @ORM\Column(type="bigint", options={"unsigned":true})
+     * @ORM\Column(type="integer", options={"unsigned":true})
      */
     protected $id;
 

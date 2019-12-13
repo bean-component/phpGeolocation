@@ -2,7 +2,8 @@
 
 namespace Bean\Tests\Geolocation\Doctrine\Orm;
 
-use Bean\Geolocation\Doctrine\Orm\Geolocation;
+use Bean\Geolocation\Doctrine\Orm\Entity\Geolocation;
+use Bean\Geolocation\Doctrine\Orm\Repository\GeolocationRepository;
 use Bean\Thing\Model\Thing;
 use Doctrine\ORM\Tools\SchemaTool;
 use PHPUnit\Framework\TestCase;
@@ -60,12 +61,27 @@ class GeolocationTest extends KernelTestCase
         $this->entityManager->flush();
     }
 
-    public function testDataProperty()
+    public function testSearchBySlug()
     {
         /** @var Geolocation $loc */
         $loc = $this->entityManager->getRepository(Geolocation::class)->findOneBySlug('magenta-location');
         $this->assertNotEmpty($loc);
         $this->assertIsArray($data = $loc->getData());
+        $this->assertEquals('Trivex, 8 Burn Rd, Singapour 369977', $loc->getAddress());
+    }
+
+    public function testSearchNearBy()
+    {
+        /** @var GeolocationRepository $repo */
+        $repo = $this->entityManager->getRepository(Geolocation::class);
+        $locs = $repo->findNearbyLocations(103.8482644, 1.2767434);
+
+        $this->assertIsArray($locs);
+        $this->assertNotEmpty($locs);
+        /** @var Geolocation $loc */
+        $loc = $locs[0]['geolocation'];
+        $distance = $locs[0]['distance'];
+        echo $loc->getName().'  '.$distance;
         $this->assertEquals('Trivex, 8 Burn Rd, Singapour 369977', $loc->getAddress());
     }
 }
