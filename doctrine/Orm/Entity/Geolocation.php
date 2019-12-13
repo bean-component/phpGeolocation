@@ -54,6 +54,35 @@ class Geolocation extends \Bean\Geolocation\Model\Geolocation implements Geoloca
      */
     protected $slug;
 
+    // Geolocation Mapping
+
+    //    Postgresql specific col
+    /**
+     */
+    private $geography;
+
+    /**
+     * @ORM\PrePersist()
+     */
+    public function initGeography()
+    {
+        if ($this->longitude && $this->latitude) {
+            $this->geography = sprintf('POINT(%f %f)', $this->longitude, $this->latitude);
+        }
+    }
+
+    public function getGeography()
+    {
+        return $this->geography;
+    }
+
+    public function setGeography($geography): self
+    {
+        $this->geography = $geography;
+
+        return $this;
+    }
+
     /**
      * @var string|null
      * @ORM\Column(type="string", length=255, nullable=true)
