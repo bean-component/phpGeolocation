@@ -47,6 +47,8 @@ install:
   - php -r "echo ini_get('memory_limit').PHP_EOL;"
   # install or update
   - mkdir src-symfony
+  - mv -f composer-travis.json composer.json
+
   - composer $ACTION
 
 #  - sed -ri "s/src/src-symfony/" config/services.yaml
